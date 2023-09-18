@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-}
+@import './color.scss';
+@import './font.scss';
+@import './reset.scss';
 
 .footer {
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
     text-align: center;
     padding: 66px 0 29px 0;
     font-size: 24px;

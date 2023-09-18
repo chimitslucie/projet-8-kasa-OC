@@ -1,16 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-
-* {
-    margin: 0;
-    padding: 0;
-}
+@import './color.scss';
+@import './font.scss';
+@import './reset.scss';
 
 .collapse {
     border-radius: 10px;
 
     &_top {
-        background-color: #ff6060;
-        color: white;
+        background-color: $primaryColor;
+        color: $white;
         font-size: 24px;
         display: flex;
         align-items: center;
@@ -28,8 +25,8 @@
     }
 
     .collapse__content {
-        background-color: #f6f6f6;
-        color: #ff6060;
+        background-color: $backgroundColor;
+        color: $primaryColor;
         font-size: 18px;
         font-weight: 400;
         border-radius: 0 0 5px 5px;
