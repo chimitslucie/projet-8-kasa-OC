@@ -1,14 +1,14 @@
-import logoHeader from './header_logo.png'
-import './header.scss'
+import { NavLink } from 'react-router-dom';
+import logoHeader from '../images/header_logo.png'
 
 function Header() {
     return (
         <header className='header'>
             <img src={logoHeader} className="header_logo" alt="logo-kasa" />
             <div className='header_links'>
-                <a className='header_link'>
+                <NavLink to={`/`} className='header_link'>
                     Accueil
-                </a>
+                </NavLink>
                 <a className='header_link'>
                     A Propos
                 </a>

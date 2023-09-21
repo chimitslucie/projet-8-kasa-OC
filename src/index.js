@@ -1,19 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import "./style/Main.scss";
 import reportWebVitals from "./reportWebVitals";
-import Footer from "./footer";
-import Header from "./header";
-import Collapse from "./Collapse";
-import Tag from "./tag";
+import Home from "./pages/Home";
+import Logement from "./pages/Logement";
+
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    }, 
+    {
+        path: "/logement/:id",
+        element: <Logement />,
+    }
+  ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <Header />
-        <Collapse />
-        <Tag />
-        <Footer />
+        <RouterProvider router={router} />
     </React.StrictMode>
 );
 

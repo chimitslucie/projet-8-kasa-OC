@@ -1,7 +1,3 @@
-@import './color.scss';
-@import './font.scss';
-@import './reset.scss';
-
 body {
     color: $primaryColor;
 }
@@ -26,7 +22,8 @@ body {
         }
     }
 
-    &_link {
+    &_link, &_link.active {
+        color: $primaryColor;
         font-size: 24px;
         cursor: pointer;
 

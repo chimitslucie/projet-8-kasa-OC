@@ -1,6 +1,5 @@
 import { useState } from "react";
-import collapseArrow from "./collapse_arrow.png";
-import "./collapse.scss";
+import collapseArrow from "./images/collapse_arrow.png";
 
 function Collapse({ title, text, className }) {
     const [isOpen, setIsOpen] = useState(false);
