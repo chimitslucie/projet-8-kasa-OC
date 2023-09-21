@@ -1,7 +1,7 @@
 import { useState } from "react";
-import collapseArrow from "./images/collapse_arrow.png";
+import collapseArrow from "../images/collapse_arrow.png";
 
-function Collapse({ title, text, className }) {
+function Collapse({ title, text }) {
     const [isOpen, setIsOpen] = useState(false);
 
     // Fonction qui bascule l'état isOpen entre true et false (ouverte ou fermée)
@@ -10,7 +10,7 @@ function Collapse({ title, text, className }) {
     };
 
     return(
-        <div className={`collapse ${className}`}>
+        <div className="collapse">
             <div className="collapse_top">
                 <h3 className="collapse__title">{title}</h3>
                 <img className={`collapse_arrow ${isOpen ? 'rotate' : ''}`} src={collapseArrow} alt='flèche' onClick={toggleCollapse} />

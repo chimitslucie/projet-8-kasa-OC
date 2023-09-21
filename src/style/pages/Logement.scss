@@ -1,0 +1,29 @@
+.information {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card_host {
+  display: flex;
+  align-items: center;
+
+  &-name {
+    white-space: wrap;
+    max-width: 95px;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  &-img {
+    max-width: 64px;
+    border-radius: 50%;
+  }
+}
+
+.logement_collapse {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
