@@ -2,7 +2,7 @@ import arrow_left from "../images/arrow_left.png";
 import arrow_right from "../images/arrow_right.png";
 import React, { useState } from "react";
 
-function Slider({slides}) {
+function Slider({ slides }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const updateIndex = (newIndex) => {
@@ -14,6 +14,15 @@ function Slider({slides}) {
     setActiveIndex(newIndex);
   };
 
+  const length = slides.length;
+  if (length === 1) {
+    return (
+      <div className="slider">
+        <img className="slider_img" src={slides} alt="vu-du-logement"></img>
+      </div>
+    );
+  }
+
   return (
     <div className="slider">
       <div
@@ -24,7 +33,7 @@ function Slider({slides}) {
           return (
             <div key={index} className="slider_item" style={{ width: "100%" }}>
               <div></div>
-              <img className="slider_img" src={slide} />
+              <img className="slider_img" src={slide} alt="vu-du-logement" />
             </div>
           );
         })}
@@ -35,7 +44,11 @@ function Slider({slides}) {
           updateIndex(activeIndex - 1);
         }}
       >
-        <img src={arrow_left} className="button_arrow-img" />
+        <img
+          src={arrow_left}
+          className="button_arrow-img"
+          alt="flèche-gauche"
+        />
       </button>
       <p className="slider_count">
         {activeIndex + 1}/{slides.length}
@@ -46,7 +59,11 @@ function Slider({slides}) {
           updateIndex(activeIndex + 1);
         }}
       >
-        <img src={arrow_right} className="button_arrow-img" />
+        <img
+          src={arrow_right}
+          className="button_arrow-img"
+          alt="flèche-droite"
+        />
       </button>
     </div>
   );

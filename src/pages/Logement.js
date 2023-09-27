@@ -37,7 +37,7 @@ function Logement() {
           <div className="information_host">
             <div className="card_host">
               <p className="card_host-name">{card.host.name}</p>
-              <img className="card_host-img" src={card.host.picture} />
+              <img className="card_host-img" src={card.host.picture} alt="propriétaire" />
             </div>
             <Rating value={card.rating} />
           </div>
