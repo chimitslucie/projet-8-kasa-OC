@@ -9,9 +9,9 @@ function Header() {
                 <NavLink to={`/`} className='header_link'>
                     Accueil
                 </NavLink>
-                <a className='header_link'>
+                <NavLink to={`/About`} className='header_link'>
                     A Propos
-                </a>
+                </NavLink>
             </div>
         </header>
     )

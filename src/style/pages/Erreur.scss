@@ -1,0 +1,41 @@
+.erreur_container {
+    margin: 139px 0;
+    text-align: center;
+
+    @media (max-width: 630px) {
+        margin: 113px 0;
+    }
+}
+
+.erreur_title {
+    font-size: 288px;
+    color: $primaryColor;
+
+    @media (max-width: 630px) {
+        font-size: 96px;
+    }
+}
+
+.erreur_text {
+    font-size: 36px;
+    color: $primaryColor;
+    margin: 139px 0;
+
+    @media (max-width: 930px) {
+        font-size: 25px;
+    }
+
+    @media (max-width: 630px) {
+        font-size: 18px;
+    }
+}
+
+.erreur_link {
+    text-decoration: underline;
+    color: $primaryColor;
+    font-size: 18px;
+
+    @media (max-width: 630px) {
+        font-size: 14px;
+    }
+}

@@ -1,8 +1,63 @@
 .information {
-  margin-top: 25px;
+  margin: 25px 0 14px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 630px) {
+    margin: 15px 0 13px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_content {
+    @media (max-width: 630px) {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 36px;
+
+      @media (max-width: 630px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &_content-location {
+    font-size: 18px;
+    margin: 5px 0 20px 0;
+
+    @media (max-width: 630px) {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  }
+
+  &_host {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 21px;
+
+    @media (max-width: 630px) {
+      width: 100%;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+  }
+}
+
+.tag_list {
+  display: flex;
+  align-items: center;
+
+  &-item {
+    margin-right: 10px;
+  }
 }
 
 .card_host {
@@ -14,16 +69,34 @@
     max-width: 95px;
     text-align: right;
     margin-right: 10px;
+    font-size: 18px;
+
+    @media (max-width: 630px) {
+      font-size: 12px;
+    }
   }
 
   &-img {
     max-width: 64px;
     border-radius: 50%;
+
+    @media (max-width: 630px) {
+      max-width: 32px;
+    }
   }
 }
 
 .logement_collapse {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 76px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.collapse:first-child {
+  margin-bottom: 20px;
 }

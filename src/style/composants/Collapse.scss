@@ -4,11 +4,12 @@
     &_top {
         background-color: $primaryColor;
         color: $white;
-        font-size: 24px;
+        font-size: 18px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10px 15px;
+        border-radius: 10px;
     }
 
     &_arrow {
@@ -20,7 +21,7 @@
         transform: rotate(180deg);
     }
 
-    .collapse__content {
+    &__content {
         background-color: $backgroundColor;
         color: $primaryColor;
         font-size: 18px;
