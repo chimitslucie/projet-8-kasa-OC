@@ -3,7 +3,7 @@ import datas from "../data/logements.json";
 import Header from "../composants/Header";
 import Slider from "../composants/Slider";
 import Tag from "../composants/Tag";
-import Rating from "../composants/rating";
+import Rating from "../composants/Rating";
 import Collapse from "../composants/Collapse";
 import Footer from "../composants/Footer";
 import Erreur from "./Erreur";
@@ -12,9 +12,9 @@ function Logement() {
   const routeParams = useParams();
   const id = routeParams.id;
   const card = datas.filter((data) => data.id === id)[0];
-  
+
   if (card === undefined) {
-    return <Erreur/>;
+    return <Erreur />;
   }
 
   return (
@@ -37,7 +37,11 @@ function Logement() {
           <div className="information_host">
             <div className="card_host">
               <p className="card_host-name">{card.host.name}</p>
-              <img className="card_host-img" src={card.host.picture} alt="propriétaire" />
+              <img
+                className="card_host-img"
+                src={card.host.picture}
+                alt="propriétaire"
+              />
             </div>
             <Rating value={card.rating} />
           </div>
